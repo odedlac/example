@@ -19,7 +19,7 @@ public class FirstTest {
 		int actualAnswer;
 		
 		
-		Mult classUnderTest = new Mult();
+		Operation classUnderTest = new Mult();
 		
 		actualAnswer = classUnderTest.operation(input1,input2);
 		
