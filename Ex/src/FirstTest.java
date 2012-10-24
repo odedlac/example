@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -21,7 +22,14 @@ public class FirstTest {
 		input2 = 6;
 	}
 	
-	
+	@Before
+	public void setUpBefore() throws Exception {
+		input1 += 10 ;
+		input2 += 9;
+	}
+
+
+		
 	@Test
 	public void test1() {
 		int input1 = 4;
@@ -66,4 +74,17 @@ public class FirstTest {
 		assertSame("Not the same",expectedAnswer, actualAnswer);
 	}
 	
+
+	@Test
+	public void test4() {
+		int expectedAnswer = 30;
+		int actualAnswer;
+		
+		
+		Operation classUnderTest = new Mult();
+		
+		actualAnswer = classUnderTest.operation(input1,input2);
+		
+		assertSame("Not the same",expectedAnswer, actualAnswer);
+	}
 }
