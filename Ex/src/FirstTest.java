@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -29,6 +30,13 @@ public class FirstTest {
 	}
 
 
+	@After
+	public void tearDown() throws Exception {
+		input1 -= 10 ;
+		input2 -= 9;
+	}
+
+
 	@Test
 	public void test4() {
 		int expectedAnswer = 30;
@@ -39,9 +47,9 @@ public class FirstTest {
 		
 		actualAnswer = classUnderTest.operation(input1,input2);
 		
-		assertSame("Not the same",expectedAnswer, actualAnswer);
-	}
-		
+		assertEquals("Not the same",expectedAnswer, actualAnswer);
+	}	
+	
 	@Test
 	public void test1() {
 		int input1 = 4;
@@ -54,8 +62,10 @@ public class FirstTest {
 		
 		actualAnswer = classUnderTest.operation(input1,input2);
 		
-		assertSame("Not the same",expectedAnswer, actualAnswer);
+		assertEquals("Not the same",expectedAnswer, actualAnswer);
 	}
+
+	
 
 	@Test
 	public void test2() {
@@ -69,13 +79,13 @@ public class FirstTest {
 		
 		actualAnswer = classUnderTest.operation(input1,input2);
 		
-		assertSame("Not the same",expectedAnswer, actualAnswer);
+		assertEquals("Not the same",expectedAnswer, actualAnswer);
 	}
 
 
 	@Test
 	public void test3() {
-		int expectedAnswer = 30;
+		int expectedAnswer = 225;
 		int actualAnswer;
 		
 		
@@ -83,7 +93,7 @@ public class FirstTest {
 		
 		actualAnswer = classUnderTest.operation(input1,input2);
 		
-		assertSame("Not the same",expectedAnswer, actualAnswer);
+		assertEquals("Not the same",expectedAnswer, actualAnswer);
 	}
 	
 
