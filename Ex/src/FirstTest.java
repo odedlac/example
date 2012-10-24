@@ -29,6 +29,18 @@ public class FirstTest {
 	}
 
 
+	@Test
+	public void test4() {
+		int expectedAnswer = 30;
+		int actualAnswer;
+		
+		
+		Operation classUnderTest = new Mult();
+		
+		actualAnswer = classUnderTest.operation(input1,input2);
+		
+		assertSame("Not the same",expectedAnswer, actualAnswer);
+	}
 		
 	@Test
 	public void test1() {
@@ -75,16 +87,4 @@ public class FirstTest {
 	}
 	
 
-	@Test
-	public void test4() {
-		int expectedAnswer = 30;
-		int actualAnswer;
-		
-		
-		Operation classUnderTest = new Mult();
-		
-		actualAnswer = classUnderTest.operation(input1,input2);
-		
-		assertSame("Not the same",expectedAnswer, actualAnswer);
-	}
 }
