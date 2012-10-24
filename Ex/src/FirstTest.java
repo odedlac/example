@@ -9,16 +9,6 @@ import org.junit.Test;
  *
  */
 
-/** First test 
- *  Mult class created
- *  method operation still a stub
- *  **/
-
-/**
- * Test should fail
- * 
- */
-
 public class FirstTest {
 
 	@Test
