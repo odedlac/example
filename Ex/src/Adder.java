@@ -6,7 +6,7 @@
  * @author Oded
  *
  */
-public class Adder implements Operation {
+public class Adder implements Operation { 
 
 	/* (non-Javadoc)
 	 * @see Operation#operation(int, int)
